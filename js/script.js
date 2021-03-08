@@ -1,6 +1,6 @@
-function Image(image, title, tags) {
+function Image(image, name, tags) {
     this.image = image; 
-    this.title = title;
+    this.name = name;
     this.tags = tags;
     this.display = function() {
 
@@ -12,10 +12,11 @@ function Image(image, title, tags) {
 
         var imgString = "";
         imgString += "<img src=>" + this.image + "</img>";
-        //imgString += "<cite>" + this.author + "</cite";
+        imgString += "<name>" + this.name + "</name>";
 
         container.html(imgString)
         $(".images").prepend(container)
+        // $(".name").prepend(container)
     }
 
 }
@@ -31,12 +32,14 @@ var images1 = [
     new Image("<img src=imgs/majestic.jpg>", "Majestic", ["pre-2018", "butterscotch", "filter", "nature"]),
     new Image("<img src=imgs/rare_cuddle.jpg>", "Rare Cuddle", ["2021", "butterscotch", "peanut"]),
     new Image("<img src=imgs/vibes.jpg>", "Vibes", ["post-2018", "filter", "butterscotch"]),
-    new Image("<img src=imgs/foot.jpg>", "Foot", ["pre-2018", "butterscotch", "filter"])
+    new Image("<img src=imgs/foot.jpg>", "Foot", ["pre-2018", "butterscotch", "filter"]),
+    new Image("<img src=imgs/friends.jpg>", "Friends(Sometimes)", ["2021", "butterscotch", "peanut", "filter"])
 ]
 
 var taglist = []
-images1.forEach(function(image){
+images1.forEach(function(image, name){
     image.display();
+    // name.display();
     image.tags.forEach(function(tag){
 
         if(!taglist.includes(tag)){
