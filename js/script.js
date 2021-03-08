@@ -15,7 +15,7 @@ function Image(image, title, tags) {
         //imgString += "<cite>" + this.author + "</cite";
 
         container.html(imgString)
-        $(".Image").prepend(container)
+        $(".images").prepend(container)
     }
 
 }
@@ -26,11 +26,11 @@ var images1 = [
     new Image("<img src=imgs/bottom_heavy.jpg>", "Bottom Heavy", ["post-2018", "butterscotch", "filter"]),
     new Image("<img src=imgs/brothers.jpg>", "Brothers", ["post-2018", "butterscotch", "peanut", "filter"]),
     new Image("<img src=imgs/clean_toes.jpg>", "Clean Toes", ["2021", "butterscotch"]),
-    new Image("<img src=imgs/forest_man.jpg>", "Forest Man", ["post-2018", "butterscotch"]),
+    new Image("<img src=imgs/forest_man.jpg>", "Forest Man", ["post-2018", "butterscotch", "nature"]),
     new Image("<img src=imgs/late_night_bathroom_party.jpg>", "Late Night Bathroom Party", ["post-2018", "butterscotch", "peanut"]),
-    new Image("<img src=imgs/majestic.jpg>", "Majestic", ["pre-2018", "butterscotch", "filter"]),
+    new Image("<img src=imgs/majestic.jpg>", "Majestic", ["pre-2018", "butterscotch", "filter", "nature"]),
     new Image("<img src=imgs/rare_cuddle.jpg>", "Rare Cuddle", ["2021", "butterscotch", "peanut"]),
-    new Image("<img src=imgs/vibes.jpg>", "Vibes", ["post-2018", "filter"]),
+    new Image("<img src=imgs/vibes.jpg>", "Vibes", ["post-2018", "filter", "butterscotch"]),
     new Image("<img src=imgs/foot.jpg>", "Foot", ["pre-2018", "butterscotch", "filter"])
 ]
 
@@ -47,8 +47,7 @@ images1.forEach(function(image){
     })
 })
 
-// 2
-// [8:01 AM]
+
 console.log(taglist)
 
 $(".filter").on("click", function() {
